@@ -1,11 +1,10 @@
 package com.example.exercise4
 
-import android.app.DatePickerDialog
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 import java.time.Year
-import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,23 +12,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val c= Calendar.getInstance()
-        var year=c.get(Calendar.YEAR)
-        val month =c.get(Calendar.MONTH)
-        val day =c.get(Calendar.DAY_OF_MONTH)
 
-        btnBirthDate.setOnClickListener{
-            val a=DatePickerDialog(this,DatePickerDialog.OnDateSetListener{view,mYear,mMonth,mDay->
-                textView.setText(""+mDay+"/"+(mMonth+1)+"/"+mYear)
-                year=mYear
-                (cal(mYear))
-            },year,month,day
-            )
-            a.show()
-        }
 
     }
-    private fun cal(year: Int){
+    fun cal(year: Int){
         val age = Year.now().value-year
         var saving =0;
 

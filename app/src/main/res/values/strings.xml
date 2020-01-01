@@ -6,4 +6,5 @@
     <string name="age">Your Age: </string>
     <string name="saving">Minimum Saving: </string>
     <string name="transfer">Maximum Transfer: </string>
+
 </resources>
