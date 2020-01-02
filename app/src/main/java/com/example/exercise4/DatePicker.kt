@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
 import kotlinx.android.synthetic.main.fragment_date_picker.*
 import java.util.*
 
@@ -17,7 +18,7 @@ import java.util.*
 class DatePicker : Fragment() {
 
 
-    lateinit var btn:Button
+    private lateinit var btn:Button
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -30,6 +31,7 @@ class DatePicker : Fragment() {
         val month =c.get(Calendar.MONTH)
         val day =c.get(Calendar.DAY_OF_MONTH)
 
+
     btn = rootView.findViewById(R.id.btnBirthDate)
     btn.setOnClickListener{
         val a=DatePickerDialog(activity!!, DatePickerDialog.OnDateSetListener
@@ -38,9 +40,7 @@ class DatePicker : Fragment() {
 
                 textView.text = ""+mDay+"/"+(mMonth+1)+"/"+mYear
                 year=mYear
-
-                (activity as MainActivity?)?.cal(mYear)
-
+                (activity as MainActivity?)?.calc(mYear)
             }, year, month, day)
 
             a.show()

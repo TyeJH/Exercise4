@@ -11,12 +11,13 @@
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="64dp"
         android:text="@string/title"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/fragment"
         app:layout_constraintTop_toBottomOf="@+id/fragment" />
 
     <TextView
@@ -78,8 +79,9 @@
         android:name="com.example.exercise4.DatePicker"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
